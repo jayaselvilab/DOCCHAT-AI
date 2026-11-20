@@ -105,15 +105,8 @@ docchat/
   tests/           pytest tests
 ```
 
-## Ideas to extend (good interview talking points)
 
-- Replace TF-IDF with neural embeddings (for example sentence-transformers) and a vector store such as FAISS or Chroma, then compare retrieval quality.
-- Add an evaluation set of questions with expected sources and report recall@k.
-- Stream Claude's answer token by token to the page.
-- Add chat history so follow-up questions work.
-- Deploy with Docker.
 
-## Resume bullets (edit the numbers to match what you measured)
 
 **DocChat: Document Q&A chatbot (RAG)** | Python, FastAPI, scikit-learn, Claude API, JavaScript
 
