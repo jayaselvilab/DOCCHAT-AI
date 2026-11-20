@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DocChat</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <h1>DocChat</h1>
+    <p class="tag">Ask questions about your documents</p>
+
+    <label class="upload" id="dropzone">
+      <input type="file" id="fileInput" accept=".txt,.md,.pdf" hidden>
+      <span>+ Upload .txt, .md or .pdf</span>
+    </label>
+    <p id="uploadMsg" class="msg" role="status"></p>
+
+    <h2>Documents</h2>
+    <ul id="docList" class="docs"></ul>
+
+    <p id="modeBadge" class="badge"></p>
+  </aside>
+
+  <main class="chat">
+    <div id="messages" class="messages" aria-live="polite">
+      <div class="bubble bot">Hi! Upload a document or use the samples, then ask me a question about it.</div>
+    </div>
+    <form id="askForm" class="composer">
+      <input id="question" type="text" placeholder="Ask a question about your documents..." autocomplete="off" required minlength="2" maxlength="1000">
+      <button id="sendBtn" type="submit">Ask</button>
+    </form>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

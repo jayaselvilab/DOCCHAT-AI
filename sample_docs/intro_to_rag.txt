@@ -1,0 +1,9 @@
+Introduction to Retrieval-Augmented Generation (RAG)
+
+Large language models answer from what they learned during training. They do not know your private documents, and they can state wrong facts with confidence, which is called hallucination. Retrieval-Augmented Generation, or RAG, reduces this problem by giving the model relevant text to read before it answers.
+
+A RAG system works in four steps. First, documents are split into small chunks of a few hundred words. Second, each chunk is turned into a searchable representation, such as a TF-IDF vector or a neural embedding. Third, when a user asks a question, the system finds the chunks most similar to the question. Fourth, those chunks are placed in the prompt and the language model writes an answer that relies only on them.
+
+Chunk size matters. Chunks that are too small lose context, and chunks that are too large add noise and cost more tokens. Many systems use overlapping chunks so that a sentence at a boundary still appears whole in at least one chunk.
+
+Good RAG systems also cite their sources so users can verify answers, and they tell the user when the documents do not contain the answer instead of guessing. Quality is measured with retrieval metrics such as recall at k and with answer metrics such as faithfulness to the source text.
